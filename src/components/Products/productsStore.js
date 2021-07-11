@@ -8,85 +8,30 @@ const TRACK_SUITS = "Track Suits";
 export const products = [
   {
     id: 1,
-    src: Images.LED_LIGHTS,
+    src: '',
     title: T_SHIRTS,
-    description: "9 watt to 20 watt",
+    description: "",
     type: T_SHIRTS,
-    images: [
-      {
-        src: Images.LED_LIGHTS,
-      },
-    ],
-    detail: [
-      {
-        varient: "9 Watt",
-        price: "60",
-      },
-      {
-        varient: "12 Watt",
-        price: "110",
-      },
-      {
-        varient: "15 Watt",
-        price: "160",
-      },
-      {
-        varient: "20 Watt",
-        price: "250",
-      },
-    ],
+    images: [],
+    detail: [],
   },
   {
     id: 2,
-    src: Images.CONSILD_LIGHTS,
+    src: '',
     title: SHORTS,
     description: "",
     type: SHORTS,
-    images: [
-      {
-        src: Images.CONSILD_LIGHTS,
-      },
-    ],
-    detail: [
-      {
-        varient: "7 Watt",
-        price: "110",
-      },
-      {
-        varient: "10 Watt",
-        price: "150",
-      },
-      {
-        varient: "12 Watt",
-        price: "190",
-      },
-      {
-        varient: "14 Watt",
-        price: "210",
-      },
-    ],
+    images: [],
+    detail: [],
   },
   {
     id: 3,
     src: Images.TUBE_20_WATTS,
     title: TRACK_PANTS,
-    description: "All Colour Available",
+    description: "",
     type: TRACK_PANTS,
-    images: [
-      {
-        src: Images.TUBE_20_WATTS,
-      },
-    ],
-    detail: [
-      {
-        varient: "10 Watt",
-        price: "110",
-      },
-      {
-        varient: "20 Watt",
-        price: "170",
-      },
-    ],
+    images: [],
+    detail: [],
   },
   {
     id: 4,
@@ -94,32 +39,43 @@ export const products = [
     title: TRACK_SUITS,
     description: "",
     type: TRACK_SUITS,
-    images: [
-      {
-        src: Images.STREET_LIGHTS,
-      },
-    ],
-    detail: [
-      {
-        varient: "24 Watt",
-        price: "1150",
-      },
-      {
-        varient: "36 Watt",
-        price: "1350",
-      },
-      {
-        varient: "40 Watt",
-        price: "1500",
-      },
-      {
-        varient: "50 Watt",
-        price: "1800",
-      },
-      {
-        varient: "60 Watt",
-        price: "2100",
-      },
-    ],
+    images: [],
+    detail: [],
+  },
+  {
+    id: 5,
+    src: '',
+    title: 'Shoes',
+    description: "",
+    type: 'Shoes',
+    images: [],
+    detail: [],
+  },
+  {
+    id: 6,
+    src: '',
+    title: 'Sando',
+    description: "",
+    type: 'Sando',
+    images: [],
+    detail: [],
+  },
+  {
+    id: 7,
+    src: '',
+    title: 'Under wears',
+    description: "",
+    type: 'Under wears',
+    images: [],
+    detail: [],
+  },
+  {
+    id: 8,
+    src: '',
+    title: 'Shokes',
+    description: "",
+    type: 'Shokes',
+    images: [],
+    detail: [],
   }
 ];

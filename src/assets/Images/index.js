@@ -19,6 +19,11 @@ import bwCarousel3 from './bw-Carousel-3.jpeg'
 import bwCarousel4 from './bw-Carousel-4.jpeg'
 import bwCarousel5 from './bw-Carousel-5.jpeg'
 
+// Tarun
+import BWTarunBack from './BWTarunBack.jpeg'
+import BWTarunByceps from './BWTarunByceps.jpeg'
+import BWTarunChest from './BWTarunChest.jpeg'
+import BWTarunHandsUp from './BWTarunHandsUp.jpeg'
 
 export default {
   sunStar1,
@@ -41,4 +46,10 @@ export default {
   bwCarousel3,
   bwCarousel4,
   bwCarousel5,
+
+  // Tarun
+  BWTarunHandsUp,
+  BWTarunChest,
+  BWTarunByceps,
+  BWTarunBack
 };
