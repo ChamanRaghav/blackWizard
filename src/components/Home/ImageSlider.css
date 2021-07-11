@@ -11,14 +11,17 @@
     border-radius: calc(.25rem - 1px);
 }
 
-.carousel-control-prev-icon,
+.carousel-control-next-icon, 
+.carousel-control-prev-icon {
+    height: 20px;
+    width: 20px;
+    background-size: 100%,100%;
+}
+
 .carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  background-size: 100%, 100%;
-  border-radius: 20%;
-  border: 1px solid black;
-  color: black;
-  background-image: none;
-  background-color: black !important;
+    background-image: url('../../assets/Icons/arrow-right-circle.svg') !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('../../assets/Icons/arrow-left-circle.svg') !important;
 }
