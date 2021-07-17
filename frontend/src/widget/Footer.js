@@ -37,8 +37,8 @@ export const Footer = () => {
           <Col md={4} lg={4} xl={4}>
             <p className="text-center text-md-left">
               ©{new Date().getFullYear()} Copyright:
-              <a href="#!">
-                <strong> www.blackwizard.com</strong>
+              <a href="https://www.blackwizard.in/">
+                <strong> www.blackwizard.in</strong>
               </a>
             </p>
           </Col>

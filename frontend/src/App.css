@@ -72,3 +72,9 @@ font-family: cursive;
 a:hover {
   text-decoration: none !important;
 }
+.mr-5p {
+ margin-right: 5%;
+}
+.mt-8 {
+  margin-top: 8px !important;
+}

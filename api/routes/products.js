@@ -1,44 +1,38 @@
 import express from 'express';
 const router = express.Router();
 
-import Product from '../models/products';
+import Product from '../models/products.js';
+
+router.get('/', (req, res) => {
+    console.log('req.body', req.body)
+    Product.find({}, (err, products) => {
+        if (err) console.log(err)
+        return res.send(products)
+    })
+})
 
 router.post('/', (req, res) => {
-    Product.create({
-        sem: req.body.semester,
-        sessional: req.body.sessional,
-        sub1: {
-            subName: req.body.subName1,
-            marks: req.body.marks1
-        },
-        sub2: {
-            subName: req.body.subName2,
-            marks: req.body.marks2
-        },
-        sub3: {
-            subName: req.body.subName3,
-            marks: req.body.marks3
-        },
-        sub4: {
-            subName: req.body.subName4,
-            marks: req.body.marks4
-        },
-        sub5: {
-            subName: req.body.subName5,
-            marks: req.body.marks5
-        },
-        sub6: {
-            subName: req.body.subName6,
-            marks: req.body.marks6
-        }
-    }, function (err, mark) {
-        if (err) {
-            console.log(err);
-        } else {
-            student.save();
-            console.log(mark, 'Saved!');
-            res.redirect("/student/" + student._id);
-        }
+    console.log('req.body', req.body)
+    const { name, price, rating, imageUrl, available, gender, category } = req.body
+    console.log('name, price, rating, imageUrl, available, gender, category', name, price, rating, imageUrl, available, gender, category)
+    Product.create({ name, price, rating, imageUrl, available, gender, category }, (err, product) => {
+        if (err) console.log(err);
+        return res.send(product)
+    })
+})
+
+router.put('/:id', (req, res) => {
+    const { name, price, rating, imageUrl, available, gender, category } = req.body
+    Product.findOneAndUpdate({ _id: req.params.id }, { name, price, rating, imageUrl, available, gender, category }, (err) => {
+        if (err) console.log(err);
+        return res.send(`Product with id - ${req.params.id} updated`)
+    })
+})
+
+router.delete('/:id', (req, res) => {
+    Product.findByIdAndDelete({ _id: req.params.id }, {}, (err, product) => {
+        if (err) console.log(err);
+        return res.send(`Product with id - ${req.params.id} & name - ${product.name} deleted`)
     })
 })
 

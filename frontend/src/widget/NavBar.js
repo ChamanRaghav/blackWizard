@@ -29,10 +29,18 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setIsExpanded(isExpanded ? false : "expanded")} />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Link to={`/clothes`} className="nav-list text-white text-deco-none" onClick={() => setIsExpanded(false)}>
+            <Link to={`/clothes`} className="nav-list text-white text-deco-none ml-1" onClick={() => setIsExpanded(false)}>
               Clothes
             </Link>
+            <Link to={`/products`} className="nav-list text-white text-deco-none ml-1" onClick={() => setIsExpanded(false)}>
+              Products
+            </Link>
           </Nav>
+          {/* <Nav className="mr-auto">
+            <Link to={`/products`} className="nav-list text-white text-deco-none" onClick={() => setIsExpanded(false)}>
+              Products
+            </Link>
+          </Nav> */}
           <Nav>
             <NavDropdown
               title="Categories"
