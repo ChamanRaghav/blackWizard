@@ -75,11 +75,16 @@ const Cards = ({ products }) => {
                         />
                       </div>
                       <Card.Text className="mb-3i">Available: {product.available ? 'Yes' : 'No'}</Card.Text>
-                      <Card.Text className="mb-3i">Gender: {product.gender.toUpperCase()}</Card.Text>
+                      <Card.Text className="mb-3i">For: {product.gender.toUpperCase()}</Card.Text>
                       <Card.Text className="">Category: {product.category.toUpperCase()}</Card.Text>
                       <Link to={`/products/${product._id}`}>
-                        <Button variant="outline-primary float-right" disabled={true} className="">
+                        <Button variant="light" className="">
                           Check Product Details
+                        </Button>
+                      </Link>
+                      <Link to={`/products/${product._id}`}>
+                        <Button variant="primary" className="float-right">
+                          Buy
                         </Button>
                       </Link>
                     </Card.Body>
