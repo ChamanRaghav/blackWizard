@@ -17,13 +17,8 @@ const slice = createSlice({
     extraReducers: (builder) => {
         // Add reducers for additional action types here, and handle loading state as needed
         builder.addCase(apiActions.fetchProducts.fulfilled, (state, action) => {
-            console.log('action.payload yeahhhhhhh!!!! :-) hurrey', action.payload)
             state.products = action.payload || initialState.products
         })
-        // {
-        // [apiActions.fetchProducts.fulfilled]: (state, action) => {
-        //     state.products = action.payload || initialState.products
-        // }
     },
 })
 

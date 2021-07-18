@@ -78,3 +78,9 @@ a:hover {
 .mt-8 {
   margin-top: 8px !important;
 }
+.mb-m5 {
+  margin-bottom: -5px !important;
+}
+.mb-3i {
+  margin-bottom: 3px !important;
+}

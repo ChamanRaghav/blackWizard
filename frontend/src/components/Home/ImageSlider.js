@@ -13,6 +13,7 @@ const ImageSlider = () => {
       interval={2000}
       onSelect={handleSelect}
       className="m-20"
+      fade
     >
       <Carousel.Item>
         <img

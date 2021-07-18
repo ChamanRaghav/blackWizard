@@ -1,8 +1,11 @@
 
 const axios = require('axios').default;
 
+// Update this url as per env or deployement
+const API_BASE_URL = 'http://localhost:8081'
+
 const axiosWizard = axios.create({
-    baseURL: 'http://localhost:8081'
+    baseURL: API_BASE_URL
 });
 
 const axiosRequest = async (requestUrl, method, config, data) => {

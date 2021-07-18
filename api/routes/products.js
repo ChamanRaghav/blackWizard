@@ -4,7 +4,6 @@ const router = express.Router();
 import Product from '../models/products.js';
 
 router.get('/', (req, res) => {
-    console.log('req.body', req.body)
     Product.find({}, (err, products) => {
         if (err) console.log(err)
         return res.send(products)
