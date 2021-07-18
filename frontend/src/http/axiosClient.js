@@ -9,6 +9,7 @@ const axiosWizard = axios.create({
 });
 
 const axiosRequest = async (requestUrl, method, config, data) => {
+    console.log('requestUrl, method, config, data', requestUrl, method, config, data)
     try {
         const res = await axiosWizard.request({
             url: requestUrl,

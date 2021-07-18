@@ -9,3 +9,15 @@ export const fetchProducts = createAsyncThunk(
             url: '/products'
         })
 )
+
+export const saveProduct = createAsyncThunk(
+    'products/saveProduct',
+    async (product, thunkAPI) => {
+        console.log('product in API', product)
+        return await axiosClientRequest({
+            url: '/products',
+            httpMethod: 'post',
+            data: product
+        })
+    }
+)

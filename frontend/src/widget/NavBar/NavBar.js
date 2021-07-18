@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Navbar, Nav, NavDropdown, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Images from "../assets/Images";
-import { products } from "../components/Products/productsStore";
+import Images from "../../assets/Images";
+import { products } from "../../components/Products/productsStore";
 import "./Navbar.css";
 
 const NavBar = () => {
@@ -36,11 +36,6 @@ const NavBar = () => {
               Products
             </Link>
           </Nav>
-          {/* <Nav className="mr-auto">
-            <Link to={`/products`} className="nav-list text-white text-deco-none" onClick={() => setIsExpanded(false)}>
-              Products
-            </Link>
-          </Nav> */}
           <Nav>
             <NavDropdown
               title="Categories"
@@ -66,13 +61,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-// const ProductsDropdown = () => (
-//   <>
-//     {products.map((product) => (
-//       <NavDropdown.Item href={`/products/${product.id}`}>
-//         {product.title}
-//       </NavDropdown.Item>
-//     ))}
-//   </>
-// );

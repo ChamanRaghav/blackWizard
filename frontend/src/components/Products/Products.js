@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 import { fetchProducts } from "../../store/products/products.apiActions";
 import { selectProducts } from "../../store/products/products.getters";
 import ReactStars from "react-rating-stars-component";
+import AddProductModal from "./AddProductModal";
+import { hideSpinner, showSpinner } from '../../store/spinners';
+import Spinner from "../../widget/Spinner/Spinner";
+import { SPINNER_TYPES } from "../../widget/Spinner/spinner.constants";
+import DeleteProductModal from "./DeleteProductModal";
 
 const CARD_VARIANT = [
   'Primary',
@@ -25,18 +30,20 @@ export const Products = () => {
   const products = useSelector(selectProducts)
 
   useEffect(() => {
-    dispatch(fetchProducts())
+    dispatch(showSpinner())
+    dispatch(fetchProducts()).then(() => dispatch(hideSpinner()))
   }, [dispatch])
 
   return (
-    <>
+    <div className="mb-100">
       <h1 className="mt-20 mb-20 text-black text-align-center font-family-monospace">
-        <Button variant="primary" className="mr-5p float-right mt-8" size="md">Add Products</Button>
+        <AddProductModal />
         Products
       </h1>
-      <Cards products={products} />
-
-    </>
+      <Spinner spinnerType={SPINNER_TYPES.PROPAGATE_LOADER}>
+        <Cards products={products} />
+      </Spinner>
+    </div>
   );
 };
 
@@ -58,7 +65,8 @@ const Cards = ({ products }) => {
                     fluid="true"
                     className="mx-auto"
                   >
-                    <Card.Header as="h5">Featured</Card.Header>
+                    <Card.Header as="h5">Featured <DeleteProductModal /></Card.Header>
+
                     <Card.Img variant="top" src={product.imageUrl} />
                     <Card.Body>
                       <Card.Title>{product.name}</Card.Title>
@@ -74,7 +82,7 @@ const Cards = ({ products }) => {
                           isHalf={true}
                         />
                       </div>
-                      <Card.Text className="mb-3i">Available: {product.available ? 'Yes' : 'No'}</Card.Text>
+                      <Card.Text className="mb-3i">Available In Stock: {product.available ? `Yes(${Math.floor((Math.random() * 1000))})` : 'No(0)'}</Card.Text>
                       <Card.Text className="mb-3i">For: {product.gender.toUpperCase()}</Card.Text>
                       <Card.Text className="">Category: {product.category.toUpperCase()}</Card.Text>
                       <Link to={`/products/${product._id}`}>

@@ -16,7 +16,7 @@ export const Footer = () => {
               <iframe
                 title="Satnali_Mahendergarh"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28084.703792453758!2d75.9469537777592!3d28.37130393136319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3912e904d5acdd83%3A0xb421b893380b69aa!2sSatnali%2C%20Haryana%20123024!5e0!3m2!1sen!2sin!4v1625333546793!5m2!1sen!2sin"
-                width="600"
+                width="100%"
                 height="450"
                 frameBorder="0"
                 allowFullScreen=""
@@ -121,3 +121,5 @@ const Contact = () => (
     </p>
   </Col>
 );
+
+export default Footer
