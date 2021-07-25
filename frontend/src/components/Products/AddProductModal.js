@@ -21,14 +21,18 @@ const categories = [
 
 
 function AddProductModal() {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const [show, setShow] = useState(false)
+    const handleClose = () => {
+        setShow(false)
+        setProduct({ ...initialProduct })
+    }
+    const handleShow = () => setShow(true)
     const dispatch = useDispatch()
+
     const initialProduct = {
         name: '',
         description: '',
-        imageUrl: 'https://i.ibb.co/8nwbg7n/test-items.jpg',
+        imageUrl: 'https://i.ibb.co/8nwbg7n/test-items.jpg', // Implement from here - https://dev.to/yosraskhiri/how-to-upload-an-image-using-mern-stack-1j95
         price: '233',
         gender: '',
         category: '',
@@ -83,7 +87,7 @@ function AddProductModal() {
                                 onChange={base64 => console.log('base64', base64)}
                                 onError={errMsg => console.log('errMsg', errMsg)}
                             >
-                                <button className="select-file">
+                                <button className="select-file" disabled>
                                     Click to Upload Product Image / Select File
                                 </button>
                             </ImagePicker>

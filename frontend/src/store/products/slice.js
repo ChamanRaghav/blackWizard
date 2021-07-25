@@ -23,11 +23,6 @@ const slice = createSlice({
         builder
             .addCase(apiActions.fetchProducts.fulfilled, (state, action) => {
                 state.products = action.payload || initialState.products
-            }).addCase(apiActions.saveProduct.fulfilled, (state, action) => {
-                console.log('action', action.payload)
-            }).addCase(apiActions.deleteProduct.fulfilled, (state, action) => {
-                console.log('action product deleted', action.payload)
-                // state.
             })
     },
 })

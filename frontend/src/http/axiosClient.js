@@ -10,7 +10,6 @@ const axiosWizard = axios.create({
 });
 
 const axiosRequest = async (requestUrl, method, config, data, dispatch, successMessage, errorMessage) => {
-    console.log('requestUrl, method, config, data', requestUrl, method, config, data, dispatch, successMessage, errorMessage)
     try {
         const res = await axiosWizard.request({
             url: requestUrl,
@@ -21,14 +20,10 @@ const axiosRequest = async (requestUrl, method, config, data, dispatch, successM
             },
             data
         })
-        if (res.data && successMessage) {
-            dispatch(setNotificationMessage({ message: successMessage, variant: 'success' }))
-        }
+        if (res.data && successMessage) dispatch(setNotificationMessage({ message: successMessage, variant: 'success' }))
         return res.data
     } catch (exception) {
-        if (errorMessage) {
-            dispatch(setNotificationMessage({ message: errorMessage, variant: 'danger' }))
-        }
+        if (errorMessage) dispatch(setNotificationMessage({ message: errorMessage, variant: 'danger' }))
         throw exception
     }
 };

@@ -2,6 +2,6 @@ import slice from "./slice"
 
 export const {
     name,
-    actions: { toggleSpinnersVisibility, showSpinner, hideSpinner },
+    actions: { showSpinner, hideSpinner },
     reducer,
 } = slice
