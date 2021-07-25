@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Modal, Form, Row, Col } from 'react-bootstrap'
+import { Button, Modal, Form, Row, Col, Image } from 'react-bootstrap'
 import FloatingLabel from "react-bootstrap-floating-label";
 import './products.css'
 import { ImagePicker } from 'react-file-picker'
@@ -32,7 +32,7 @@ function AddProductModal() {
     const initialProduct = {
         name: '',
         description: '',
-        imageUrl: 'https://i.ibb.co/8nwbg7n/test-items.jpg', // Implement from here - https://dev.to/yosraskhiri/how-to-upload-an-image-using-mern-stack-1j95
+        imageUrl: '', // Implement from here - https://dev.to/yosraskhiri/how-to-upload-an-image-using-mern-stack-1j95
         price: '233',
         gender: '',
         category: '',
@@ -61,6 +61,8 @@ function AddProductModal() {
         }
     }
 
+    const handlePhoto = (e = '') => setProduct({ ...product, imageUrl: e })
+
     return (
         <>
             <Button variant="primary" onClick={handleShow} className="mr-5p float-right mt-8" size="md">Add Products</Button>
@@ -81,16 +83,32 @@ function AddProductModal() {
                             controlId='gender'
                         >
                             <Form.Label><b>Product Picture(Feature Comming Soon!): </b></Form.Label>
-                            <ImagePicker
-                                extensions={['jpg', 'jpeg', 'png']}
-                                dims={{ minWidth: 100, maxWidth: 500, minHeight: 100, maxHeight: 500 }}
-                                onChange={base64 => console.log('base64', base64)}
-                                onError={errMsg => console.log('errMsg', errMsg)}
-                            >
-                                <button className="select-file" disabled>
-                                    Click to Upload Product Image / Select File
-                                </button>
-                            </ImagePicker>
+                            <Row>
+                                <Col>
+                                    <ImagePicker
+                                        extensions={['jpg', 'jpeg', 'png']}
+                                        dims={{ minWidth: 1, maxWidth: 5000, minHeight: 1, maxHeight: 5000 }}
+                                        onChange={handlePhoto}
+                                        onError={errMsg => console.log('errMsg', errMsg)}
+                                    >
+                                        <button
+                                            className="select-file"
+                                        >
+                                            Click to Upload Product Image / Select File
+                                        </button>
+                                    </ImagePicker>
+                                </Col>
+                                {product.imageUrl && (
+                                    <Col>
+                                        <Image
+                                            src={product.imageUrl}
+                                            alt='Image Not Found'
+                                            className='product-preview'
+                                        />
+                                        <i className="fas fa-times remove-icon fa-lg" onClick={() => handlePhoto()}></i>
+                                    </Col>
+                                )}
+                            </Row>
                         </Form.Group>
                         <FloatingLabel
                             controlId="floatingName"

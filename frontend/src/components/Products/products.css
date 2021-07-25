@@ -21,3 +21,12 @@
     margin: 10px 0px 10px 0px;
     color: darkblue;
 }
+
+.product-preview {
+    height: auto;
+    width: 80%;
+}
+
+.remove-icon {
+    position: absolute !important;
+}
