@@ -3,15 +3,19 @@ import * as apiActions from './products.apiActions'
 
 const initialState = {
     products: [],
-    productsVisibility: true
+    productsVisibility: true,
+    productIdToBeDeleted: ''
 }
 
 const slice = createSlice({
-    name: 'products',
+    name: 'productsStore',
     initialState,
     reducers: {
         toggleProductsVisibility(state, action) {
             state.productsVisibility = action.payload || initialState.productsVisibility
+        },
+        setProductIdToBeDeleted(state, action) {
+            state.productIdToBeDeleted = action.payload || initialState.productIdToBeDeleted
         }
     },
     extraReducers: (builder) => {
@@ -21,7 +25,9 @@ const slice = createSlice({
                 state.products = action.payload || initialState.products
             }).addCase(apiActions.saveProduct.fulfilled, (state, action) => {
                 console.log('action', action.payload)
-                // state.products = action.payload || initialState.products
+            }).addCase(apiActions.deleteProduct.fulfilled, (state, action) => {
+                console.log('action product deleted', action.payload)
+                // state.
             })
     },
 })

@@ -2,6 +2,6 @@ import slice from "./slice"
 
 export const {
     name,
-    actions: { toggleProductsVisibility, setProductIdToBeDeleted },
+    actions: { setSelectedModal },
     reducer,
 } = slice

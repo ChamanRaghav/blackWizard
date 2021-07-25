@@ -9,7 +9,9 @@ import AddProductModal from "./AddProductModal";
 import { hideSpinner, showSpinner } from '../../store/spinners';
 import Spinner from "../../widget/Spinner/Spinner";
 import { SPINNER_TYPES } from "../../widget/Spinner/spinner.constants";
-import DeleteProductModal from "./DeleteProductModal";
+import { setProductIdToBeDeleted } from "../../store/products";
+import { setSelectedModal } from "../../store/modals";
+import MODAL_ID from "../../store/modals/modals.constants";
 
 const CARD_VARIANT = [
   'Primary',
@@ -48,6 +50,7 @@ export const Products = () => {
 };
 
 const Cards = ({ products }) => {
+  const dispatch = useDispatch()
   return (
     <>
       <Container fluid>
@@ -65,7 +68,17 @@ const Cards = ({ products }) => {
                     fluid="true"
                     className="mx-auto"
                   >
-                    <Card.Header as="h5">Featured <DeleteProductModal /></Card.Header>
+                    <Card.Header as="h5">
+                      Featured
+                      <Button variant="info"
+                        onClick={() => {
+                          dispatch(setSelectedModal(MODAL_ID.DELETE_PRODUCT))
+                          dispatch(setProductIdToBeDeleted(product._id))
+                        }}
+                        className="float-right">
+                        <i className="fas fa-trash-alt"></i>
+                      </Button>
+                    </Card.Header>
 
                     <Card.Img variant="top" src={product.imageUrl} />
                     <Card.Body>

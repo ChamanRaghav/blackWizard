@@ -4,31 +4,40 @@ import { Home } from "./components/Home/Home";
 import { Products } from "./components/Products/Products";
 // import { ProductItem } from "./components/ProductItem/ProductItem";
 import { CommingSoon } from "./components/CommingSoon/CommingSoon"
+import Screens from "./widget/Screens/Screens";
 
 const Routes = () => {
   return (
     <>
       <Switch>
-        <Route path="/home">
+        <LoadScreens path="/home">
           <Home />
-        </Route>
-        <Route path="/clothes/:clothId">
+        </LoadScreens>
+        <LoadScreens path="/clothes/:clothId">
           <CommingSoon />
           {/* <ProductItem /> */}
-        </Route>
-        <Route path="/clothes">
+        </LoadScreens>
+        <LoadScreens path="/clothes">
           <CommingSoon />
           {/* <Products /> */}
-        </Route>
-        <Route path="/products">
+        </LoadScreens>
+        <LoadScreens path="/products">
           <Products />
-        </Route>
-        <Route path="/">
+        </LoadScreens>
+        <LoadScreens path="/">
           <Home />
-        </Route>
+        </LoadScreens>
       </Switch>
     </>
   );
 };
+
+const LoadScreens = ({ children, ...rest }) => {
+  return (
+    <Route {...rest}>
+      <Screens>{children}</Screens>
+    </Route>
+  )
+}
 
 export default Routes;

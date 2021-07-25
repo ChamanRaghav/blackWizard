@@ -39,7 +39,6 @@ function AddProductModal() {
     const setProductFildValue = (field, value) => {
         setProduct({ ...product, [field]: value })
     }
-    console.log('product', product)
 
     const isAnyFieldEmpty = () => {
         for (var key in product) {
@@ -151,8 +150,8 @@ function AddProductModal() {
                                         onChange={event => setProductFildValue('category', event.target.value)}
                                     >
                                         <option value=''>Select Categrory</option>
-                                        {categories.map(category => (
-                                            <option value={category.value}>{category.label}</option>
+                                        {categories.map((category, index) => (
+                                            <option key={index} value={category.value}>{category.label}</option>
                                         ))}
                                     </Form.Control>
                                 </Col>

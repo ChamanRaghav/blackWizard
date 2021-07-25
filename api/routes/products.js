@@ -11,9 +11,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    console.log('req.body', req.body)
     const { name, price, rating = 5, imageUrl, available, gender, category, description } = req.body
-    console.log('name, price, rating, imageUrl, available, gender, category', name, price, rating, imageUrl, available, gender, category, description)
     Product.create({ name, price, rating, imageUrl, available, gender, category, description }, (err, product) => {
         if (err) console.log(err);
         return res.send(product)

@@ -9,7 +9,6 @@ export const ProductItem = () => {
   const product = products.find(
     (product) => product.id === parseInt(productId)
   );
-  // console.log("product", product, productId, products);
   return <>{product && <CardItem product={product} />} </>;
 };
 
