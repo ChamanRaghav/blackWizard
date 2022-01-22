@@ -1,0 +1,95 @@
+.mh-500 {
+  max-height: 500px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.body {
+  background-color: gainsboro;
+}
+.text-white {
+  color: white;
+}
+.text-black {
+  color: black;
+}
+.text-align-center {
+  text-align: center;
+}
+.bg-white {
+  background-color: white;
+}
+.app {
+  background-color: seashell !important;
+}
+.w-150 {
+  width: 150px;
+}
+.m-20 {
+  margin: 20px;
+}
+.mx-20 {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+.font-family-monospace{
+  font-family: monospace;
+}
+.p-35 {
+  padding: 35px !important;
+}
+.text-black {
+  color: black;
+}
+.link-to-text {
+  color: black !important;
+  text-decoration: none !important;
+}
+.br-5 {
+  border-radius: 5px !important;
+}
+.ml-20 {
+  margin-left: 20px !important;
+}
+.ml-10 {
+  margin-left: 10px !important;
+}
+.text-decoration-none {
+  text-decoration: none !important;
+}
+.font-family-cursive {
+font-family: cursive;
+}
+.m-10 {
+  margin: 10px;
+}
+.mt-85 {
+  margin-top: 85px;
+}
+a:hover {
+  text-decoration: none !important;
+}
+.mr-5p {
+ margin-right: 5%;
+}
+.mt-8 {
+  margin-top: 8px !important;
+}
+.mb-m5 {
+  margin-bottom: -5px !important;
+}
+.mb-3i {
+  margin-bottom: 3px !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.mt-10 {
+  margin-top: 10px !important;
+}
+.mb-100 {
+  margin-bottom: 100px !important;
+}

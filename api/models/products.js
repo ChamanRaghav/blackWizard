@@ -6,12 +6,13 @@ var productSchema = new mongoose.Schema({
         trim: true,
         required: true
     },
+    description: String,
     price: String,
     rating: String,
     imageUrl: String,
     available: {
         type: Boolean,
-        default: false
+        default: true
     },
     gender: {
         type: String,
@@ -19,5 +20,6 @@ var productSchema = new mongoose.Schema({
     },
     category: String
 });
+const Product = mongoose.model('Product', productSchema);
 
-export default mongoose.model('Product', productSchema);
+export default Product

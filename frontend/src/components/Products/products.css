@@ -1,0 +1,32 @@
+.floating-label-dropdown {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.category-drop {
+    width: 100%;
+    background-color: brown !important;
+}
+.select-file {
+    width: 100%;
+    background-color: transparent;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border: 1px solid darkblue;
+    text-decoration-line: underline;
+    margin: 10px 0px 10px 0px;
+    color: darkblue;
+}
+
+.product-preview {
+    height: auto;
+    width: 80%;
+}
+
+.remove-icon {
+    position: absolute !important;
+}
