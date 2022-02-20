@@ -25,3 +25,8 @@
 .carousel-control-prev-icon {
     background-image: url('../../assets/Icons/arrow-left-circle.svg') !important;
 }
+
+.carousel-item {
+    /* display: none !important; */
+    /* float: none !important; */
+}

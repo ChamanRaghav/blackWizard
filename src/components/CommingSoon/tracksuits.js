@@ -7,7 +7,7 @@ export const Tracksuits = () => {
         <div>
             <h1 className="text-align-center">TRACK SUITS<span role='img' aria-label=''>✨💪</span></h1>
             <Container >
-                <img src={Image1} alt={""} />
+                <img src={Image1} alt={""}  className="w-100" />
             </Container>
             <h1 className="text-align-center"> Shop Now!<span role='img' aria-label=''>😊 </span></h1>
         </div>

@@ -19,7 +19,7 @@ export const Home = () => {
           Commited to provide quality products designed & developed specially for <b>Sport Persons.</b>
         </p>
         <p>
-          <Link to={`/clothes`} className="text-decoration-none">
+          <Link to={`/clothes/2`} className="text-decoration-none">
             <Button variant="outline-dark" size="lg" block>
               Checkout Categories
             </Button>

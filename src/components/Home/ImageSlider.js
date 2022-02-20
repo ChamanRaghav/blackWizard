@@ -16,7 +16,7 @@ const ImageSlider = () => {
     >
       <Carousel.Item>
         <img
-          className="d-block w-100 mh-500"
+          className="d-block mh-500"
           src={Images.BWTarunHandsUp}
           alt="Second slide"
         />
@@ -28,7 +28,7 @@ const ImageSlider = () => {
 
       <Carousel.Item>
         <img
-          className="d-block w-100 mh-500"
+          className="d-block mh-500"
           src={Images.BWTarunBack}
           alt="Second slide"
         />
@@ -39,7 +39,7 @@ const ImageSlider = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 mh-500"
+          className="d-block mh-500"
           src={Images.bwCarousel1}
           alt="Second slide"
         />
@@ -50,7 +50,7 @@ const ImageSlider = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 mh-500"
+          className="d-block mh-500"
           src={Images.bwCarousel2}
           alt="Second slide"
         />
@@ -61,7 +61,7 @@ const ImageSlider = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 mh-500"
+          className="d-block mh-500"
           src={Images.bwCarousel3}
           alt="Second slide"
         />
@@ -72,7 +72,7 @@ const ImageSlider = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 mh-500"
+          className="d-block mh-500"
           src={Images.bwCarousel4}
           alt="Second slide"
         />
@@ -83,7 +83,7 @@ const ImageSlider = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 mh-500"
+          className="d-block mh-500"
           src={Images.bwCarousel5}
           alt="Second slide"
         />
